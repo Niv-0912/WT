@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <script>
+        var a =Number(prompt("Enter no1."));
+        var b =Number(prompt("Enter no2."));
+        var c =prompt("Enter choise.");
+
+        var result;
+            switch(c){
+                case '+':
+                    result=a+b;
+                    break;
+                case '-':
+                    result=a-b;
+                    break;
+                case '*':
+                    result=a*b;
+                    break;
+                case '/':
+                    result=a/b;
+                    break;
+            }
+
+        alert("Answer is :"+result);
+
+    </script>
+</body>
+</html>
