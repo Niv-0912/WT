@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Click anywhere on this page</h2>
+    <p id="msg">Waiting for mouse click...</p>
+
+    <script>
+        document.addEventListener("mousedown", function (event) {
+
+                if (event.button === 0) {
+                    document.getElementById("msg").innerHTML = "Left Clicked";
+                } else if (event.button === 2) {
+                    document.getElementById("msg").innerHTML = "Right Clicked";
+                }
+            }
+        );
+
+    </script>
+</body>
+
+</html>

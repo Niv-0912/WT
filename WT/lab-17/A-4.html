@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical 17.4</title>
+</head>
+<body>
+
+    <h2>Form Event Demonstration</h2>
+
+    <form onsubmit="showEvent('Submit')" onreset="showEvent('Reset')">
+
+        Name:
+        <input type="text" onchange="showEvent('Change')"
+            onfocus="showEvent('Focus')"
+            onblur="showEvent('Blur')">
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <p id="result">Form event will appear here</p>
+
+    <script>
+        function showEvent(eventName) {
+            document.getElementById("result").innerHTML = "Form Event: " + eventName;
+        }
+    </script>
+
+</body>
+</html>

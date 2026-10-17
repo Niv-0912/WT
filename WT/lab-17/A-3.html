@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Keyboard Event Demonstration</h2>
+
+    <input type="text"
+        onkeydown="showEvent('Key Down')"
+        onkeyup="showEvent('Key Up')">
+
+    <p id="result">Press any key in the box</p>
+
+    <script>
+        function showEvent(eventName) {
+            document.getElementById("result").innerHTML = "Keyboard Event: " + eventName;
+        }
+    </script>
+
+</body>
+</html>

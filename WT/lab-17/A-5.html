@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical 17.5</title>
+</head>
+<body>
+
+    <h2 id="heading">Hello Students</h2>
+
+    <p id="para">This is a paragraph.</p>
+
+    <button onclick="changeProperties()">Change Properties</button>
+
+    <script>
+        function changeProperties() {
+            document.getElementById("heading").innerHTML =
+                "Welcome to JavaScript";
+
+            document.getElementById("heading").style.color = "red";
+
+            document.getElementById("heading").style.fontSize = "30px";
+
+            document.getElementById("para").style.backgroundColor = "yellow";
+
+            document.getElementById("para").style.padding = "10px";
+        }
+    </script>
+
+</body>
+</html>

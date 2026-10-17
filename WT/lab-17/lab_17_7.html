@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array CRUD Operations</title>
+</head>
+<body>
+
+    <h2>Array CRUD Operations</h2>
+
+    <input type="text" id="item" placeholder="Enter item">
+
+    <br><br>
+
+    <button onclick="addItem()">Add</button>
+    <button onclick="displayItems()">Display</button>
+    <button onclick="updateItem()">Update</button>
+    <button onclick="deleteItem()">Delete</button>
+
+    <p id="result"></p>
+
+    <script>
+        let arr = [];
+
+        function addItem() {
+            let item = document.getElementById("item").value.trim();
+
+            if (item === "") {
+                alert("Please enter an item");
+                return;
+            }
+
+            arr.push(item);
+            alert("Item added successfully");
+            displayItems();
+        }
+
+        function displayItems() {
+            let output = "";
+
+            for (let i = 0; i < arr.length; i++) {
+                output += i + ": " + arr[i] + "<br>";
+            }
+
+            document.getElementById("result").innerHTML =
+                output || "Array is empty";
+        }
+
+        function updateItem() {
+            let index = prompt("Enter index to update");
+
+            if (index === null || index.trim() === "" ||
+                !Number.isInteger(Number(index)) ||
+                Number(index) < 0 || Number(index) >= arr.length) {
+                alert("Invalid index");
+                return;
+            }
+
+            let newItem = prompt("Enter new value");
+
+            if (newItem === null || newItem.trim() === "") {
+                alert("Value cannot be empty");
+                return;
+            }
+
+            arr[Number(index)] = newItem.trim();
+            displayItems();
+        }
+
+        function deleteItem() {
+            let index = prompt("Enter index to delete");
+
+            if (index === null || index.trim() === "" ||
+                !Number.isInteger(Number(index)) ||
+                Number(index) < 0 || Number(index) >= arr.length) {
+                alert("Invalid index");
+                return;
+            }
+
+            arr.splice(Number(index), 1);
+            displayItems();
+        }
+    </script>
+
+</body>
+</html>

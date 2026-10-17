@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+</head>
+<body>
+
+    <h2>Mouse Event Demonstration</h2>
+
+    <button
+        onmousedown="showEvent('Mouse Down')"
+        onmouseup="showEvent('Mouse Up')"
+        onclick="showEvent('Click')"
+        ondblclick="showEvent('Double Click')"
+        onmouseover="showEvent('Mouse Over')"
+        onmouseout="showEvent('Mouse Out')">
+        Try Mouse Events
+    </button>
+
+    <p id="result">Event will appear here</p>
+
+    <script>
+        function showEvent(eventName) {
+            document.getElementById("result").innerHTML = "Mouse Event: " + eventName;
+        }
+    </script>
+
+</body>
+</html>

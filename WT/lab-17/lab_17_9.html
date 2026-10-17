@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Key Code</title>
+</head>
+<body>
+
+    <h2>Find Key Code</h2>
+
+    <input type="text" id="inputBox"
+        onkeydown="showKey(event)"
+        placeholder="Press any key">
+
+    <p id="result"></p>
+
+    <script>
+        function showKey(event) {
+            document.getElementById("result").innerHTML =
+                "Key: " + event.key +
+                " | Key Code: " + event.keyCode;
+        }
+    </script>
+
+</body>
+</html>
